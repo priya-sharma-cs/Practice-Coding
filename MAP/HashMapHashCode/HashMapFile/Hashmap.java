@@ -29,7 +29,6 @@ public class Hashmap<K, V> {
     public void put(K key, V value) {
 
         int idx = hashfun(key);
-
         Node<K, V> temp = arr[idx];
 
         while (temp != null) {
@@ -45,7 +44,6 @@ public class Hashmap<K, V> {
         Node<K, V> nn = new Node<>(key, value);
 
         nn.next = arr[idx];
-
         arr[idx] = nn;
 
         size++;
@@ -58,7 +56,6 @@ public class Hashmap<K, V> {
     public V get(K key) {
 
         int idx = hashfun(key);
-
         Node<K, V> temp = arr[idx];
 
         while (temp != null) {
@@ -76,7 +73,6 @@ public class Hashmap<K, V> {
     public boolean containsKey(K key) {
 
         int idx = hashfun(key);
-
         Node<K, V> temp = arr[idx];
 
         while (temp != null) {
@@ -109,7 +105,6 @@ public class Hashmap<K, V> {
                 }
 
                 size--;
-
                 return temp.value;
             }
 
@@ -160,56 +155,54 @@ public class Hashmap<K, V> {
 
         return idx;
     }
+
     public void display() {
 
-    for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
 
-        Node<K, V> temp = arr[i];
+            Node<K, V> temp = arr[i];
 
-        System.out.print(i + " : ");
+            System.out.print(i + " : ");
 
-        while (temp != null) {
+            while (temp != null) {
 
-            System.out.print(
-                temp.key + "=" + temp.value + " -> "
-            );
+                System.out.print(
+                    temp.key + "=" + temp.value + " -> "
+                );
 
-            temp = temp.next;
-        }
+                temp = temp.next;
+            }
 
-        System.out.println("null");
-    }
-}    
-
-
-
-public String toString() {
-
-    StringBuilder sb = new StringBuilder("{");
-
-    for (int i = 0; i < arr.length; i++) {
-
-        Node<K, V> temp = arr[i];
-
-        while(temp != null) {
-
-            sb.append(temp.key)
-              .append("=")
-              .append(temp.value)
-              .append(", ");
-
-            temp = temp.next;
+            System.out.println("null");
         }
     }
 
-    if (sb.length() > 1) {
-        sb.setLength(sb.length() - 2);
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder("{");
+
+        for (int i = 0; i < arr.length; i++) {
+
+            Node<K, V> temp = arr[i];
+
+            while (temp != null) {
+
+                sb.append(temp.key)
+                  .append("=")
+                  .append(temp.value)
+                  .append(", ");
+
+                temp = temp.next;
+            }
+        }
+
+        if (sb.length() > 1) {
+            sb.setLength(sb.length() - 2);
+        }
+
+        sb.append("}");
+
+        return sb.toString();
     }
-
-    sb.append("}");
-
-    return sb.toString();
-}
-
-
 }
