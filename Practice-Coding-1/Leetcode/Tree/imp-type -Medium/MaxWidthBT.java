@@ -1,4 +1,25 @@
+import java.util.*;
+
 class Solution {
+     public class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+
+		TreeNode() {
+		}
+
+		TreeNode(int val) {
+			this.val = val;
+		}
+
+		TreeNode(int val, TreeNode left, TreeNode right) {
+			this.val = val;
+			this.left = left;
+			this.right = right;
+		}
+	}
+
     public int widthOfBinaryTree(TreeNode root) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(root , 0 ));
