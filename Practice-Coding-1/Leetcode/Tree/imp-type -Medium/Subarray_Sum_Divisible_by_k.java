@@ -4,6 +4,7 @@ public class Subarray_Sum_Divisible_by_k {
    public static void main(String[] args){
     int[]  nums = {4,5,0,-2,-3,1};
     int k = 5;
+    System.out.println(subarraysDivByK(nums , k));
    }
    public static int subarraysDivByK(int[] nums, int k) {
     HashMap<Integer, Integer> map = new HashMap<>();
