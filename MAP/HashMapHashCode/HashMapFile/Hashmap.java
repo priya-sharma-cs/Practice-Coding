@@ -2,7 +2,7 @@ package HashMapFile;
 
 public class Hashmap<K, V> {
 
-    class Node<K, V> {
+   static class Node<K, V> {
 
         K key;
         V value;

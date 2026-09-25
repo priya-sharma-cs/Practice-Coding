@@ -17,6 +17,7 @@ public class Main {
 
             arr[i] = new Pair(st, et);
         }
+        sc.close();
 
         // Sort activities according to ending time
         Arrays.sort(arr, (a, b) -> a.et - b.et);
