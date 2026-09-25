@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 public class SubarraySumEqualsToK {
 
@@ -12,7 +12,8 @@ public class SubarraySumEqualsToK {
 
     public static int subarraySum(int[] nums, int k) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        java.util.HashMap<Integer, Integer> map =
+                new java.util.HashMap<>();
 
         map.put(0, 1);
 
@@ -21,7 +22,7 @@ public class SubarraySumEqualsToK {
 
         for (int i = 0; i < nums.length; i++) {
 
-            sum += nums[i]; // sum is the prefix sum of the array
+            sum += nums[i];
 
             if (map.containsKey(sum - k)) {
                 count += map.get(sum - k);
