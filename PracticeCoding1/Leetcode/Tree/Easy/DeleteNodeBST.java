@@ -1,5 +1,8 @@
-class Solution {
+
+
+public class DeleteNodeBST {
     public class TreeNode {
+
 		int val;
 		TreeNode left;
 		TreeNode right;
@@ -18,6 +21,19 @@ class Solution {
 		}
 	}
 
+     public static void main(String[] args) {
+        DeleteNodeBST obj = new DeleteNodeBST();
+        TreeNode root = obj.new TreeNode(5);
+        root.left = obj.new TreeNode(3);
+        root.right = obj.new TreeNode(6);
+        root.left.left = obj.new TreeNode(2);
+        root.left.right = obj.new TreeNode(4);
+        root.right.right = obj.new TreeNode(7);
+
+        int key = 3;
+        TreeNode newRoot = obj.deleteNode(root, key);
+        System.out.println("New root after deletion: " + newRoot.val);
+     }
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root==null){
              return null;

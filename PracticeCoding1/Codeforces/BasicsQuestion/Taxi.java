@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Taxi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -32,6 +32,8 @@ public class Main {
         // Remaining groups of 1
         taxis += (count[1] + 3) / 4;
 
+
         System.out.println(taxis);
+        sc.close();
     }
 }

@@ -1,4 +1,4 @@
-class Solution {
+public class MergeSort {
     public int[] sortArray(int[] nums) {
         mergeSort(nums, 0, nums.length - 1);
         return nums;
