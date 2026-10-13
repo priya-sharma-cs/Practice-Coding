@@ -2,7 +2,7 @@ import java.util.*;
 
 public class verticalOrderTraversal {
 
-git 
+
 public static void main(String[] args) {
 
     verticalOrderTraversal obj = new verticalOrderTraversal();
