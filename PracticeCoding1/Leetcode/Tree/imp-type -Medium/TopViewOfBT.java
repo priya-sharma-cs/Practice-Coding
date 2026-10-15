@@ -2,7 +2,6 @@ import java.util.*;
 
 
 public class TopViewOfBT{
-
 public class TreeNode {
 		int val;
 		TreeNode left;
