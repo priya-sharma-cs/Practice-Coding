@@ -2,18 +2,15 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class FindMedianFromDataStream {
-
-    static class MedianFinder {
-
-        PriorityQueue<Integer> maxHeap; // left half
-        PriorityQueue<Integer> minHeap; // right half
+     public static class MedianFinder {
+        private PriorityQueue<Integer> maxHeap;
+        private PriorityQueue<Integer> minHeap;
 
         public MedianFinder() {
-
             maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-
             minHeap = new PriorityQueue<>();
         }
+
 
         public void addNum(int num) {
 

@@ -1,7 +1,12 @@
 public class MergeSort {
-    public int[] sortArray(int[] nums) {
-        mergeSort(nums, 0, nums.length - 1);
-        return nums;
+    public static void main(String[] args) {
+        int[] arr = { 38, 27, 43, 3, 9, 82, 10 };
+
+        mergeSort(arr, 0, arr.length - 1);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
     }
 
     public static void mergeSort(int[] arr, int left, int right) {

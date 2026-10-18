@@ -1,6 +1,24 @@
 import java.util.*;
 
 public class RightSideView {
+    public static void main(String[] args) {
+
+        //       1
+        //      / \
+        //     2   3
+        //      \   \
+        //       5   4
+
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.right = new TreeNode(5);
+        root.right.right = new TreeNode(4);
+
+        List<Integer> result = rightSideView(root);
+
+        System.out.println(result);
+    }   
 
     static class TreeNode {
         int val;
@@ -20,6 +38,7 @@ public class RightSideView {
             this.right = right;
         }
     }
+    
 
     public static List<Integer> rightSideView(TreeNode root) {
 
@@ -58,22 +77,4 @@ public class RightSideView {
         return result;
     }
 
-    public static void main(String[] args) {
-
-        //       1
-        //      / \
-        //     2   3
-        //      \   \
-        //       5   4
-
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.right = new TreeNode(5);
-        root.right.right = new TreeNode(4);
-
-        List<Integer> result = rightSideView(root);
-
-        System.out.println(result);
-    }
 }

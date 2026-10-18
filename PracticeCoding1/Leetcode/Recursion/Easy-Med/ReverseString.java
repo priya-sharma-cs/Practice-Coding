@@ -1,4 +1,11 @@
-class Solution {
+public class ReverseString 
+{
+    public static void main(String[] args) {
+        char[] s = {'h','e','l','l','o'};
+        ReverseString obj = new ReverseString();
+        obj.reverseString(s);
+        System.out.println(s);
+    }
     public void reverss(char[] s, int  l , int r){
         if(l>=r){
             return;

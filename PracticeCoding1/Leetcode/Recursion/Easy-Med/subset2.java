@@ -1,7 +1,14 @@
 import java.util.*;
+public class subset2 {
+    public static void main(String[] args) {
+        int[] nums = {1,2,2};
+        List<List<Integer>> ans = new ArrayList<>();
+        ans = subsetsWithDup(nums); 
+        System.out.println(ans);
 
-class Solution {
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        
+    }
+    public static List<List<Integer>> subsetsWithDup(int[] nums) {
 
         Arrays.sort(nums);
 
