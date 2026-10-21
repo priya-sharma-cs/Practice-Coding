@@ -57,3 +57,45 @@ public class TreeNode {
         }
     }
 }
+
+
+
+
+
+// without using class pair
+// class Solution {
+//     public ArrayList<Integer> topView(Node root) {
+//         ArrayList<Integer> ans = new ArrayList<>();
+
+//         if (root == null) {
+//             return ans;
+//         }
+
+//         Queue<Node> q = new LinkedList<>();
+//         Queue<Integer> hdQ = new LinkedList<>();
+//         TreeMap<Integer, Integer> map = new TreeMap<>();
+
+//         q.add(root);
+//         hdQ.add(0);
+
+//         while (!q.isEmpty()) {
+//             Node n = q.poll();
+//             int hd = hdQ.poll();
+
+//             map.putIfAbsent(hd, n.data);
+
+//             if (n.left != null) {
+//                 q.add(n.left);
+//                 hdQ.add(hd - 1);
+//             }
+
+//             if (n.right != null) {
+//                 q.add(n.right);
+//                 hdQ.add(hd + 1);
+//             }
+//         }
+
+//         ans.addAll(map.values());
+//         return ans;
+//     }
+// }
